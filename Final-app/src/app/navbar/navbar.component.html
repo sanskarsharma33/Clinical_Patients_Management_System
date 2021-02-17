@@ -1,0 +1,87 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
+</head>
+<div class="my-nav">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+		<div class="container">
+			<a class="navbar-brand" target="_blank" >
+			<strong >My Clinic Site</strong>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				aria-expanded="flase" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+				</ul>	
+			<ul class="navbar-nav nav-flex-icons">
+				<li class="nav-item">
+					<a class="nav-link" routerLink="/">Home
+					</a>
+				</li>
+				<!-- <li class="nav-item">
+				<a class="nav-link" >
+					About
+				</a>
+				</li> -->
+				<li class="nav-item">
+					<a class="nav-link" *ngIf="!flag"  href="addpatient">
+						Add Patient
+					</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" *ngIf="!flag" href="search" >
+					Search Patients
+				</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" *ngIf="!flag"  href="newCase">
+						New Case
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" *ngIf="!flag" href="viewcases" >
+						Follow-up
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" *ngIf="!!flag" href="generateCertificate" >
+						Certificate
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" *ngIf="flag" routerLink="/login" >
+						Sign-in/Sign-up
+					</a>
+					<a class="nav-link" *ngIf="!flag" style="cursor:pointer" (click)="_authService.logout()" >
+						LogOut
+					</a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</nav>
+	</div>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>

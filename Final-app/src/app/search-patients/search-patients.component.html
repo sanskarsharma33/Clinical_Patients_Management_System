@@ -1,0 +1,52 @@
+<div class="main">
+    <app-navbar></app-navbar>
+    <div class="txt">
+		<a> Search Patient</a>
+	</div>
+	<form (ngSubmit)="onSubmit()">
+        <div class="drp">
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">{{Type}}</button>
+                <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only"></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" (click)="setType(0)">Search By Patient ID</a>
+                    <a class="dropdown-item" (click)="setType(1)">Search By Firstname</a>
+                    <a class="dropdown-item" (click)="setType(2)">Search By Lastname</a>
+                    <a class="dropdown-item" (click)="setType(3)">View All Patients</a>
+                    <a class="dropdown-item" (click)="setType(4)">Search By City</a>
+                </div>
+            </div>
+		<input type="text" name="search" [(ngModel)]="patientparameter" placeholder="Search...." validation="false">
+        </div>
+	</form>
+	<!-- <div class="result">
+	</div> -->
+<br>
+    <div *ngIf="flag"  class="result">
+        <div class="login-html1">
+            <div class="login-form1">
+                <div class="row card-group">
+                    <!-- {{patients[1].name.firstname}} -->
+                    <div class="col mb-2" *ngFor="let patient of patients">
+                        <div class="card text-dark bg-light mb-3 space-left2" style="width: 18rem; height: 17rem; justify-items: center; margin-right: 5px; margin-left:5px;">
+                            <div class="card-header ">{{patient.name.firstname}} {{patient.name.lastname}}</div>
+                            <div class="card-header ">{{patient.gender}}</div>
+                            <div class="card-header ">{{patient.email}}</div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{patient.address}}</h5>
+                                <p class="card-text"></p>
+                            </div>
+                            <a (click)="onUpdateOption(patient._id)" class="btn btn-primary text-white">More Details</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

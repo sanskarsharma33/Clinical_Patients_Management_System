@@ -1,0 +1,48 @@
+<div class="main">
+    <app-navbar></app-navbar>
+        <!-- <div class="drp">
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning">{{Type}}</button>
+                <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only"></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" (click)="setType(0)">Search By Patient ID</a>
+                    <a class="dropdown-item" (click)="setType(1)">Search By Firstname</a>
+                    <a class="dropdown-item" (click)="setType(2)">Search By Lastname</a>
+                </div>
+            </div>
+        </div> -->
+	<!-- <div class="result">
+	</div> -->
+<br>
+    <div *ngIf="flag" class="result">
+        <div class="login-html1">
+            <div class="login-form1">
+                <div class="row card-group">
+                
+                    <div class="col mb-2" *ngFor="let case of cases">
+                        <div class="card text-dark bg-light mb-3 space-left2" style="width: 18rem; min-height: 17rem; justify-items: center; margin-right: 5px; margin-left:5px;">
+                            <div class="card-header ">Name: <strong>{{case.resulting[0].name.firstname}} {{case.resulting[0].name.lastname}}</strong></div>
+                            <div class="card-header ">MajorDieases:   <strong>{{case.majorDiease}}</strong></div>
+                            <div class="card-header ">{{case.caseDate | date: "dd-MM-yyyy"}}</div> 
+                            <div class="card-body">
+                                <h5 class="card-title">{{case.note}}</h5>
+                                <p class="card-text"></p>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-danger"  (click)="onDelete(case._id)" style="width: 100px; height: 40px;">Remove</button>
+                                &nbsp;&nbsp;
+                                <button type="button" class="btn btn-success"  (click)="onEdit(case._id)" style="width: 100px; height: 40px;">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

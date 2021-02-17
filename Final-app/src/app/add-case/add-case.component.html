@@ -1,0 +1,32 @@
+<div class="main">
+<app-navbar></app-navbar>
+<br>
+    <br>
+<br>
+        <div class="login-html1">
+    <!-- <div class="login-wrap"> -->
+            <div class="login-form1">
+                <form action="#" method="POST" id="one" name="one" >
+                <!-- <div class="sign-in-htm"> -->
+                    
+                    <div class="group1">
+                        <label class="label">Patient ID</label>
+                        <input id="id" [(ngModel)]="CaseDetails.pId" name="pId" type="text" class="input" placeholder="ID">
+                    </div>
+                    <div class="group1">
+                        <label class="label">Major Disease</label>
+                        <input id="majordisease" [(ngModel)]="CaseDetails.majorDiease" name="majorDiease" type="text" class="input" placeholder="Disease">
+                    </div>
+                    <div class="group1">
+                        <label class="label">Note</label>
+                        <textarea id="note" [(ngModel)]="CaseDetails.note" name="note" class="input" rows="5" cols="50"></textarea>
+                    </div>
+                    <div class="group1">
+                        <button type="submit" (click)="addCase()"form="one" class="button" value="add">Add</button>   
+                    </div>  
+                <!-- </div>  -->
+            </form>
+            </div>
+        <!-- </div> -->
+    </div>
+</div>

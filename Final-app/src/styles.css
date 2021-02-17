@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    /* margin:0; */
+    height: 64em;
+    width: 100%;
+    /* background-color: aqua; */
+    font-family: 'Nunito', 'sans-serif';
+    font-size: 18px;
+}
+
+.cntr{
+    min-height: 60em;
+    max-height: 150em;
+    /* height: 100%; */
+    width: 100%;
+    margin: 0 auto;
+}

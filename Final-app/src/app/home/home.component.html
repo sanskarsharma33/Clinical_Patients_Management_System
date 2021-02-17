@@ -1,0 +1,85 @@
+<div class="home-body">
+    <app-navbar></app-navbar>
+<br>
+<br>
+	<div class="ttmp">
+	<div class="login-wrap1">
+		<div class="login-html1">
+		
+			<input id="tab-1" type="radio" name="tab" class="sign-in1" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up1"><label for="tab-2" class="tab">Sign Up</label>
+			<div class="login-form1">
+			<form action="#" method="POST">
+				<div class="sign-in1-htm">
+				<br>
+				<br>
+				<br>
+					<div class="group1">
+						<label for="user" class="label">Username</label>
+						<input [(ngModel)]="registerUserData.email" name="email" id="user" type="email" class="form-control" style="color:white; border-radius:25px; height:50px; border:0px; background: rgba(255,255,255,0.1);">
+					</div>
+					<div class="group1">
+						<label for="pass" class="label">Password</label>
+						<input [(ngModel)]="registerUserData.password" name="password" id="pass" type="password" class="form-control" style="color:white; border-radius:25px; height:50px; border:0px; background: rgba(255,255,255,0.1);" data-type="password">
+					</div>
+					<div class="group1">
+						<input id="check" type="checkbox" class="check" checked>
+						<label for="check"><span class="icon"></span> Keep me Signed in</label>
+					</div>
+					<div class="group1">
+						<button type="submit" (click)="loginUser()" class="button" value="Sign In">Sign In</button>	
+					</div>	
+					<div class="hr"></div>
+					<div class="foot-lnk">
+						<a href="#forgot">Forgot Password?</a>
+					</div>
+				</div>
+			</form>
+			<form action="#" name="sign" #sform="ngForm" onsubmit="return validateform()">
+				<div class="sign-up1-htm">
+					<div class="group1">
+						<label for="user" class="label">Username</label>
+						<input [(ngModel)]="registerUserData.username" #uname='ngModel' [class.is-invalid]="uname.invalid && uname.touched" required name="username" id="user" type="text" class="form-control" style="color:white; border-radius:25px; height:50px; border:0px; background: rgba(255,255,255,0.1);">
+					</div>
+					<div *ngIf="uname.invalid && uname.touched"
+						class="text-danger">
+							&nbsp;&nbsp;&nbsp;<small>* Enter User name</small>
+					<br>
+					<br>
+					</div>
+					<div class="group1">
+						<label for="pass" class="label">Email Address</label>
+						<input [(ngModel)]="registerUserData.email" #email='ngModel' name="email" id="email" type="email" class="form-control" style="color:white; border-radius:25px; height:50px; border:0px; background: rgba(255,255,255,0.1);" [class.is-invalid]="email.invalid && email.touched"  required email >
+					</div>
+					<div class="group1">
+					<div *ngIf="email.invalid && email.touched" class="text-danger">
+							&nbsp;&nbsp;&nbsp;<small>* Enter valid email</small>
+					<br>
+					
+					</div>
+					</div>
+					<div class="group1">
+						<label for="pass" class="label">Password</label>
+						<input [(ngModel)]="registerUserData.password" name="password" id="pass" type="password" class="form-control" style="color:white; border-radius:25px; height:50px; border:0px; background: rgba(255,255,255,0.1);" data-type="password" #pass="ngModel" [class.is-invalid]="pass.invalid && pass.touched" required password>
+					</div>
+					<div *ngIf="pass.invalid && pass.touched"
+						class="text-danger">
+							&nbsp;&nbsp;&nbsp;<small>* Enter Valid Password</small>
+					</div>
+					
+					<div class="group1">
+						<label for="pass" class="label">Repeat Password</label>
+						<input id="pass1" type="password" name="repass" [(ngModel)]="repass" class="form-control" style="color:white; border-radius:25px; height:50px; border:0px; background: rgba(255,255,255,0.1);" data-type="password" #repass1="ngModel" [class.is-invalid]="repass1.invalid && repass1.touched" required password>
+					</div>
+				
+					<div class="group1">
+						<button type="button" (click)="registerUser()" class="button" value="Sign Up" >Sign Up</button>
+					</div>
+					<div class="hr"></div>
+					
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>

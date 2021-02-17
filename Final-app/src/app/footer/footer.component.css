@@ -1,0 +1,51 @@
+#page-content {
+	flex: 1 0 auto;
+  }
+  
+#sticky-footer {
+height: 30%;
+flex-shrink: none;
+}
+.fa {
+padding: 15px;
+font-size: 30px;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+/* text-align: center; */
+/* text-decoration: none; */
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+.fa-linkedin {
+background: #007bb5;
+color: white;
+}
+
+.fa-youtube {
+background: #bb0000;
+color: white;
+}
+
+.fa-instagram {
+background: #125688;
+color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+.logo1{
+    text-align: center;
+    justify-content: space-between;
+}

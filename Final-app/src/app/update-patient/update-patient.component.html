@@ -1,0 +1,76 @@
+<div class="main">
+<app-navbar></app-navbar>
+<br>
+    <br>
+<br>
+        <div class="login-html1">
+    <!-- <div class="login-wrap"> -->
+            <div class="login-form1">
+                <form action="#" method="POST" id="one" name="one" onsubmit="return validateform()">
+                <!-- <div class="sign-in-htm"> -->
+                    <div class="group1">
+                        <label  class="label">First Name</label>
+                        <input type="text" #uname='ngModel' [ngClass]="uname.invalid" required [(ngModel)]="patientDetails.name.firstname" name="firstname" class="input" placeholder="First Name">
+                    </div>
+                    <div class="group1">
+                        <label class="label">Last Name</label>
+                        <input type="text" #uname='ngModel' [ngClass]="uname.invalid" required [(ngModel)]="patientDetails.name.lastname" name="lastname" class="input" placeholder="Last Name">
+                    </div>
+                    <div class="group1">
+                        <label class="label">Email</label>
+                        <input type="text" [(ngModel)]="patientDetails.email" name="email" class="input" #email='ngModel' [class.is-invalid]="email.invalid && email.touched"  required email >
+                    </div>
+                    <div class="group1">
+                        <label class="label">Gender</label>
+                        <select class="input" [(ngModel)]="patientDetails.gender" name="gender"> 
+                            <option value="Male">
+                                Male
+                            </option>
+                            <option value="Female">
+                                Female
+                            </option>
+                        </select>
+                    </div>
+                    <div class="group1">
+                        <label class="label">Date Of Birth</label>
+                        <input type="date" [(ngModel)]="patientDetails.dob" class="input" name="dob">
+                    </div>
+                    <div class="group1">
+                        <label class="label">Address</label>
+                        <textarea class="input" [(ngModel)]="patientDetails.address" rows="5" cols="50" name="address"></textarea>
+                    </div>
+                    <div class="group1">
+                        <label class="label">City</label>
+                        <input type="text" [(ngModel)]="patientDetails.city" class="input" name="city">
+                    </div>
+                    <div class="group1">
+                        <label class="label">District</label>
+                        <input type="text" [(ngModel)]="patientDetails.district" class="input" name="district">
+                    </div>
+                    <div class="group1">
+                        <label class="label">Marital Status</label>
+                        <select class="input" [(ngModel)]="patientDetails.maritalStatus" name="maritalStatus"> 
+                            <option value="Single">
+                                Single
+                            </option>
+                            <option value="Maried">
+                                Maried
+                            </option>
+                        </select>
+                    </div>
+                    <div class="group1">
+                        <label class="label">Contact Number</label>
+                        <input type="text" [(ngModel)]="patientDetails.contactNumber" class="input" name="contactNumber">
+                    </div>
+                    <div class="group1">
+                        <button type="submit" (click)="onUpdate()" form="one" class="button" value="add">Update</button>   
+                    </div>  
+                <!-- </div>  -->
+            </form>
+            </div>
+        <!-- </div> -->
+    </div>
+</div>
+<br>
+<br>
+
